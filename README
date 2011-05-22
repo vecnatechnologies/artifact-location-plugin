@@ -1,0 +1,43 @@
+About
+=======
+
+This Maven 
+
+Usage
+=======
+
+Let's say you have a project that depends on an artifact with coordinates org.group:dependency and you want to expose the location of the artifact (in your local repository) to another plugin.
+By adding the plugin configuration below, you will expose the location of the artifact (YOUR_MAVEN_REPO/org/group/dependency/VERSION/dependency-VERSION.jar) as ${dependencyLocation} 
+to all plugin executions in subsequent phases.
+
+<plugin>
+  <groupId>com.vecna</groupId>
+  <artifactId>artifact-location-plugin</artifactId>
+  <version>0.0.2</version>
+  <executions>
+    <execution>
+      <id>default-compile</id>
+      <phase>generate-sources</phase>
+      <goals>
+        <goal>execute</goal>
+      </goals>
+      <configuration>
+        <artifacts>
+          <property>
+            <name>org.group:dependency</name>
+            <value>dependencyLocation</value>
+          </property>
+        </artifacts>
+      </configuration>
+    </execution>
+  </executions>
+</plugin>
+
+Note that multiple artifacts can be specified and mapped to different project properties.
+
+Credits
+=======
+
+Originally developed by Vecna Technologies, Inc. and open sourced as part of its community service program. See the LICENSE file for more details.
+Vecna Technologies encourages employees to give 10% of their paid working time to community service projects. 
+To learn more about Vecna Technologies, its products and community service programs, please visit http://www.vecna.com.
