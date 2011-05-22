@@ -1,7 +1,7 @@
 About
 =======
 
-This Maven 
+This Maven plugin finds artifacts' "physical" locations based on their groupId and artifactId.
 
 Usage
 =======
