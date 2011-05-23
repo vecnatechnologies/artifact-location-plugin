@@ -19,11 +19,6 @@ permissions and limitations under the License.  -->
   <version>0.0.2-SNAPSHOT</version>
   <name>Artifact Location Plugin</name>
   <description>Maven plugin for exporting artifact locations as project properties</description>
-  <scm>
-    <connection>scm:git:git://github.com/vecnatechnologies/artifact-location-plugin.git</connection>
-    <url>scm:git:git://github.com/vecnatechnologies/artifact-location-plugin.git</url>
-    <developerConnection>scm:git:git://github.com/vecnatechnologies/artifact-location-plugin.git</developerConnection>
-  </scm>
   <organization>
     <name>Vecna Technologies</name>
     <url>http://vecna.com</url>
@@ -35,11 +30,23 @@ permissions and limitations under the License.  -->
       <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
     </license>
   </licenses>
+  <developers>
+    <developer>
+      <id>vecna</id>
+      <name>Vecna Technologies</name>
+      <email>opensource@vecna.com</email>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:git://github.com/vecnatechnologies/artifact-location-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:vecnatechnologies/artifact-location-plugin.git</developerConnection>
+    <url>https://github.com/vecnatechnologies/artifact-location-plugin</url>
+  </scm>
   <parent>
     <groupId>com.vecna.parent</groupId>
     <artifactId>open-parent-pom</artifactId>
-    <version>1.0.8-SNAPSHOT</version>
-  </parent>  
+    <version>1.2</version>
+  </parent>
   <properties>
     <!-- Plexus-injected fields don't start with m_ -->
     <checkstyle.maxAllowedViolations>5</checkstyle.maxAllowedViolations>
